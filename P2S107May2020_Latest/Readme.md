@@ -1,5 +1,8 @@
 # EVA Phase 2 Session 10 End Game Assignment
 
+Youtube link - https://youtu.be/M-JtnVuTn5U
+
+
 ## Environment Stack
 - Kivy (map.py and car.kv) - for the city map, car and define other environment conditions
 - Pytorch (The T3D Model) ai.py file
