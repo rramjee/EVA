@@ -51,7 +51,7 @@ Replay buffer contains
 2. Played around with learning rate, max episode steps, reward values but nothing seem to work.
 
 ### Thanks Note:
-Thanks a lot Rohan Shravan for this wonderful journey. This has been a fantastic learning experiences. Thanks again for inspiration and motivation to learn AI.
+Thanks a lot Rohan Shravan for this wonderful journey. This has been a fantastic learning experience. Thanks again for inspiration and motivation to learn AI.
 
 
 
