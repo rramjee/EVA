@@ -1,6 +1,6 @@
 # EVA Phase 2 Session 10 End Game Assignment
 
-Youtube link - https://youtu.be/M-JtnVuTn5U
+Youtube link - https://youtu.be/IEgZx8cdL9c
 
 
 ## Environment Stack
@@ -15,7 +15,7 @@ Youtube link - https://youtu.be/M-JtnVuTn5U
 ## Parameters Used
 1. State Parameters to the CNN
 
-  1. **Observation Space** - I'm using image of the car moving in the map as the observation space or state. The car location is know by car.x and car.y and surrounding pixels are cropped (80*80) of the sand image. Later image is resized before passing to actor and critic models *(Initially, tried to add the car rotation in the image using orientation and angle but facing an issue of car rotating around a same place. Later tried several things but nothing is able to fix the car rotation issue. Also tried to remove the car from cropped image)*
+  1. **Observation Space** - I'm using image of the car moving in the map as the observation space or state. The car location is know by car.x and car.y and surrounding pixels are cropped (80*80) of the sand image. Later image is resized before passing to actor and critic models *(Initially, tried to add the car rotation in the image using orientation and angle but facing an issue of car rotating around a same place. Also, most of the times the program is crashing my laptop. FInally, today ran it on my friend's laptop with GPU. Able to train. Now model is going between target A to Target B but still not taking roads. Need to train further to improve my model)*
 
   2. **Orientation**: Positive and negative orientation are concatenated as input to actor and critic models
 
@@ -42,16 +42,16 @@ Replay buffer contains
 
 ### Issues faced:
 
-1. The car is rotating around a same place after few rounds of training. Unable to overcome this issue.
+1. TAfter the latest training today, the car is going from target A to target B but not taking roads. 
 
 #### Things tried to fix car rotation issue: 
 
-1. Adding car to the cropped image with car placed in the orientation and angle. But couldn't place the car correctly in the specific angle.
-2. Adding orientation with state as input actor and critic models.
-3. Adding distance with orientation and state as input to actor and critic models.
-4. Played around with learning rate, max episode steps, reward values but nothing seem to work.
 
-### Note:
+1. Adding orientation with state as input actor and critic models.
+2. Played around with learning rate, max episode steps, reward values but nothing seem to work.
 
-I'm using a MNIST prediction model for actor and critic. The MNIST model is not a EVA standard model. I'm using 5x5 kernel based model. I have tried several 3x3 model, but not running on my laptop and laptop keeps crashing and for strange reason , it is slow as well. 5x5 works fast and so going ahead with this 5x5 kernel based model due to hardware problems.
+### Thanks Note:
+Thanks a lot Rohan Shravan for this wonderful journey. This has been a fantastic learning experiences. Thanks again for inspiration and motivation to learn AI.
+
+
 
